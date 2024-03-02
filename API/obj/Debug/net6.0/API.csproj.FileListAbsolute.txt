@@ -40,3 +40,9 @@ C:\Users\Pero\Desktop\Algebra\OOPNET\PROJECT\TripPlanner\API\obj\Debug\net6.0\re
 C:\Users\Pero\Desktop\Algebra\OOPNET\PROJECT\TripPlanner\API\obj\Debug\net6.0\API.pdb
 C:\Users\Pero\Desktop\Algebra\OOPNET\PROJECT\TripPlanner\API\obj\Debug\net6.0\API.genruntimeconfig.cache
 C:\Users\Pero\Desktop\Algebra\OOPNET\PROJECT\TripPlanner\API\obj\Debug\net6.0\ref\API.dll
+C:\Users\Pero\Desktop\Algebra\OOPNET\PROJECT\TripPlanner\API\bin\Debug\net6.0\BCrypt.Net-Next.dll
+C:\Users\Pero\Desktop\Algebra\OOPNET\PROJECT\TripPlanner\API\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Pero\Desktop\Algebra\OOPNET\PROJECT\TripPlanner\API\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Pero\Desktop\Algebra\OOPNET\PROJECT\TripPlanner\API\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Pero\Desktop\Algebra\OOPNET\PROJECT\TripPlanner\API\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Pero\Desktop\Algebra\OOPNET\PROJECT\TripPlanner\API\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll

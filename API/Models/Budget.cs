@@ -20,7 +20,7 @@ namespace API.Models
         [Column("category", TypeName = "character varying")]
         public string? Category { get; set; }
         [Column("amount")]
-        public long? Amount { get; set; }
+        public double? Amount { get; set; }
 
         [ForeignKey("TripId")]
         [InverseProperty("Budgets")]

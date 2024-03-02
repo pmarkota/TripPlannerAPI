@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "X1w1qayq4wz2y0dFmbVDdAexmJNA7VD4tK4ix43+kGIoEsrYeDTTGpg2nFTfRNKiDn1mTuSxEb5juetZf0ezuw==",
+  "dgSpecHash": "bxAnydujIxhzOv5UJEvKCAksBaz70mwx7i/cPjEmDViGbgX779Uw/MV6zFeSGqi8kDBqfrp7CMubzU8oGHySaQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Pero\\Desktop\\Algebra\\OOPNET\\PROJECT\\TripPlanner\\API\\API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Pero\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\Pero\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Pero\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.27\\microsoft.entityframeworkcore.6.0.27.nupkg.sha512",
     "C:\\Users\\Pero\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.27\\microsoft.entityframeworkcore.abstractions.6.0.27.nupkg.sha512",
@@ -21,6 +22,10 @@
     "C:\\Users\\Pero\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\Pero\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\Pero\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\Pero\\.nuget\\packages\\microsoft.identitymodel.abstractions\\7.4.0\\microsoft.identitymodel.abstractions.7.4.0.nupkg.sha512",
+    "C:\\Users\\Pero\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\7.4.0\\microsoft.identitymodel.jsonwebtokens.7.4.0.nupkg.sha512",
+    "C:\\Users\\Pero\\.nuget\\packages\\microsoft.identitymodel.logging\\7.4.0\\microsoft.identitymodel.logging.7.4.0.nupkg.sha512",
+    "C:\\Users\\Pero\\.nuget\\packages\\microsoft.identitymodel.tokens\\7.4.0\\microsoft.identitymodel.tokens.7.4.0.nupkg.sha512",
     "C:\\Users\\Pero\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\Pero\\.nuget\\packages\\npgsql\\6.0.10\\npgsql.6.0.10.nupkg.sha512",
     "C:\\Users\\Pero\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\6.0.22\\npgsql.entityframeworkcore.postgresql.6.0.22.nupkg.sha512",
@@ -30,6 +35,7 @@
     "C:\\Users\\Pero\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
     "C:\\Users\\Pero\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\Pero\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.1\\system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",
+    "C:\\Users\\Pero\\.nuget\\packages\\system.identitymodel.tokens.jwt\\7.4.0\\system.identitymodel.tokens.jwt.7.4.0.nupkg.sha512",
     "C:\\Users\\Pero\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []
