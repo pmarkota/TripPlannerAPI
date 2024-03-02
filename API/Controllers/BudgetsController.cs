@@ -59,5 +59,33 @@ namespace API.Controllers
             _db.SaveChanges();
             return CreatedAtAction(nameof(Get), new { id = budget.BudgetId }, budget);
         }
+
+        //put with budgetputrequest model
+        [HttpPut]
+        public IActionResult Put([FromBody] BudgetPutRequest request)
+        {
+            var budget = _db.Budgets.Find(request.Id);
+            if (budget == null)
+            {
+                return NotFound();
+            }
+            budget.Category = request.Category;
+            budget.Amount = request.Amount;
+            budget.TripId = request.TripId;
+            _db.SaveChanges();
+            return NoContent();
+        }
+        [HttpDelete]
+        public IActionResult Delete(long id)
+        {
+            var budget = _db.Budgets.Find(id);
+            if (budget == null)
+            {
+                return NotFound();
+            }
+            _db.Budgets.Remove(budget);
+            _db.SaveChanges();
+            return NoContent();
+        }
     }
 }
