@@ -22,20 +22,19 @@ namespace API.Controllers
             return Ok(_db.Trips);
         }
 
-        // GET api/trips/5
-
+        // GET api/trips/5, use TripGetById to get trip only if it belongs to certain user 
         [HttpGet("{id}")]
-        public IActionResult Get(int id)
+        public IActionResult Get(int id, [FromQuery] TripGetById request)
         {
-            var trip = _db.Trips.Find(id);
-            if (trip == null)
+            var trip = _db.Trips.Find(request.TripId);
+            if (trip == null || trip.UserId != request.UserId)
             {
                 return NotFound();
             }
             return Ok(trip);
         }
 
-        //get all trips from certain user
+        //get all trips from certain user.
         [HttpGet("user/{id}")]
         public IActionResult GetTripsByUser(int id)
         {
