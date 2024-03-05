@@ -105,7 +105,8 @@ namespace API.Controllers
                 Subject = new ClaimsIdentity(new Claim[]
                 {
                     new Claim(ClaimTypes.Name, newUser.Username),
-                    new Claim(ClaimTypes.Email, newUser.Email)
+                    new Claim(ClaimTypes.Email, newUser.Email),
+                    new Claim("id", newUser.UserId.ToString())
                 }),
                 Expires = DateTime.UtcNow.AddHours(1),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
