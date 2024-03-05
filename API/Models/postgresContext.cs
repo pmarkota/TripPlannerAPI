@@ -20,7 +20,6 @@ namespace API.Models
         public virtual DbSet<AppUser> AppUsers { get; set; } = null!;
         public virtual DbSet<Budget> Budgets { get; set; } = null!;
         public virtual DbSet<Destination> Destinations { get; set; } = null!;
-        public virtual DbSet<Itinerary> Itineraries { get; set; } = null!;
         public virtual DbSet<PackingList> PackingLists { get; set; } = null!;
         public virtual DbSet<Trip> Trips { get; set; } = null!;
 
@@ -52,6 +51,11 @@ namespace API.Models
             modelBuilder.Entity<Activity>(entity =>
             {
                 entity.HasComment("activity table");
+
+                entity.HasOne(d => d.Trip)
+                    .WithMany(p => p.Activities)
+                    .HasForeignKey(d => d.TripId)
+                    .HasConstraintName("public_Activity_trip_id_fkey");
             });
 
             modelBuilder.Entity<AppUser>(entity =>
@@ -78,22 +82,6 @@ namespace API.Models
             modelBuilder.Entity<Destination>(entity =>
             {
                 entity.HasComment("destinations table");
-            });
-
-            modelBuilder.Entity<Itinerary>(entity =>
-            {
-                entity.HasComment("Itinerary Table");
-
-                entity.HasOne(d => d.Activity)
-                    .WithMany(p => p.Itineraries)
-                    .HasForeignKey(d => d.ActivityId)
-                    .HasConstraintName("public_Itineraries_activity_id_fkey");
-
-                entity.HasOne(d => d.Trip)
-                    .WithMany(p => p.Itineraries)
-                    .HasForeignKey(d => d.TripId)
-                    .OnDelete(DeleteBehavior.Cascade)
-                    .HasConstraintName("public_Itineraries_trip_id_fkey");
             });
 
             modelBuilder.Entity<PackingList>(entity =>

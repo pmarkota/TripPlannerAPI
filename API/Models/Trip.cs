@@ -14,8 +14,8 @@ namespace API.Models
     {
         public Trip()
         {
+            Activities = new HashSet<Activity>();
             Budgets = new HashSet<Budget>();
-            Itineraries = new HashSet<Itinerary>();
             PackingLists = new HashSet<PackingList>();
         }
 
@@ -37,9 +37,9 @@ namespace API.Models
         [InverseProperty("Trips")]
         public virtual AppUser? User { get; set; }
         [InverseProperty("Trip")]
-        public virtual ICollection<Budget> Budgets { get; set; }
+        public virtual ICollection<Activity> Activities { get; set; }
         [InverseProperty("Trip")]
-        public virtual ICollection<Itinerary> Itineraries { get; set; }
+        public virtual ICollection<Budget> Budgets { get; set; }
         [InverseProperty("Trip")]
         public virtual ICollection<PackingList> PackingLists { get; set; }
     }

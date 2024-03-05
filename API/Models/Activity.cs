@@ -12,11 +12,6 @@ namespace API.Models
     [Table("Activity")]
     public partial class Activity
     {
-        public Activity()
-        {
-            Itineraries = new HashSet<Itinerary>();
-        }
-
         [Key]
         [Column("activity_id")]
         public long ActivityId { get; set; }
@@ -26,8 +21,11 @@ namespace API.Models
         public string? Category { get; set; }
         [Column("description")]
         public string? Description { get; set; }
+        [Column("trip_id")]
+        public long? TripId { get; set; }
 
-        [InverseProperty("Activity")]
-        public virtual ICollection<Itinerary> Itineraries { get; set; }
+        [ForeignKey("TripId")]
+        [InverseProperty("Activities")]
+        public virtual Trip? Trip { get; set; }
     }
 }

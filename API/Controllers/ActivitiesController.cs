@@ -33,6 +33,18 @@ namespace API.Controllers
             return Ok(activity);
         }
 
+        //post, that returns all activities from certain trip
+        [HttpPost("trip")]
+        public IActionResult GetByTrip(long tripId)
+        {
+            var activities = _db.Activities.Where(a => a.TripId == tripId);
+            if (activities == null)
+            {
+                return NotFound();
+            }
+            return Ok(activities);
+        }
+
         //post with activitypostrequest model
         [HttpPost]
         public IActionResult Post([FromBody] ActivityPostRequest request)
