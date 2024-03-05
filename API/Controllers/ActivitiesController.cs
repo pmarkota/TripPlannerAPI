@@ -22,10 +22,10 @@ namespace API.Controllers
             return Ok(_db.Activities);
         }
 
-        [HttpGet("{id}")]
-        public IActionResult Get(long id)
+        [HttpPost("getbyid")]
+        public IActionResult GetById([FromBody] GetActivityById id)
         {
-            var activity = _db.Activities.Find(id);
+            var activity = _db.Activities.Find(id.ActivityId);
             if (activity == null)
             {
                 return NotFound();
@@ -35,16 +35,15 @@ namespace API.Controllers
 
         //post, that returns all activities from certain trip
         [HttpPost("trip")]
-        public IActionResult GetByTrip(long tripId)
+        public IActionResult GetActivitiesForTrip([FromBody] GetActivitiesForTrip request)
         {
-            var activities = _db.Activities.Where(a => a.TripId == tripId);
+            var activities = _db.Activities.Where(a => a.TripId == request.TripId);
             if (activities == null)
             {
                 return NotFound();
             }
             return Ok(activities);
         }
-
         //post with activitypostrequest model
         [HttpPost]
         public IActionResult Post([FromBody] ActivityPostRequest request)
@@ -53,7 +52,9 @@ namespace API.Controllers
             {
                 Name = request.Name,
                 Category = request.Category,
-                Description = request.Description
+                Description = request.Description,
+                TripId = request.TripId, //added tripid to the model and to the request, so it can be added to the db as well
+               
             };
             _db.Activities.Add(activity);
             _db.SaveChanges();
