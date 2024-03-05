@@ -52,7 +52,7 @@ namespace API.Controllers
         public IActionResult Post([FromBody] TripPostRequest request)
         {
             // Validate the registration request
-            if (request == null || !ModelState.IsValid)
+            if (request == null)
             {
                 return BadRequest("Invalid trip request");
             }
@@ -66,8 +66,10 @@ namespace API.Controllers
                 UserId = request.UserId
             });
 
+
+
             _db.SaveChanges();
-            return Ok();
+            return Ok( new {message="New trip added successfuly"});
 
         }
 

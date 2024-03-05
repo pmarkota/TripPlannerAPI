@@ -19,6 +19,7 @@ namespace API.Models
         public virtual DbSet<Activity> Activities { get; set; } = null!;
         public virtual DbSet<AppUser> AppUsers { get; set; } = null!;
         public virtual DbSet<Budget> Budgets { get; set; } = null!;
+        public virtual DbSet<Destination> Destinations { get; set; } = null!;
         public virtual DbSet<Itinerary> Itineraries { get; set; } = null!;
         public virtual DbSet<PackingList> PackingLists { get; set; } = null!;
         public virtual DbSet<Trip> Trips { get; set; } = null!;
@@ -72,6 +73,11 @@ namespace API.Models
                     .HasForeignKey(d => d.TripId)
                     .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("public_Budgets_trip_id_fkey");
+            });
+
+            modelBuilder.Entity<Destination>(entity =>
+            {
+                entity.HasComment("destinations table");
             });
 
             modelBuilder.Entity<Itinerary>(entity =>
