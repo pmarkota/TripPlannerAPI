@@ -34,15 +34,15 @@ namespace API.Controllers
         }
 
         //get for a specific trip
-        [HttpGet("trip/{id}")]
-        public IActionResult GetByTrip(long id)
+        [HttpPost("trip")]
+        public IActionResult GetBudgetsForTrip([FromBody] PostGetBudgetsForTrip request)
         {
-            var budget = _db.Budgets.Find(id);
-            if (budget == null)
+            var budgets = _db.Budgets.Where(b => b.TripId == request.TripId);
+            if (budgets == null)
             {
                 return NotFound();
             }
-            return Ok(budget);
+            return Ok(budgets);
         }
 
         //post with budgetpostrequest model
