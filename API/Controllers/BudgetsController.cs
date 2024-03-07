@@ -21,11 +21,11 @@ namespace API.Controllers
         {
             return Ok(_db.Budgets);
         }
-
-        [HttpGet("{id}")]
-        public IActionResult Get(int id)
+        //post to get a specific budget by id
+        [HttpPost("id")]
+        public IActionResult GetBudgetById([FromBody] PostGetBudgetById request)
         {
-            var budget = _db.Budgets.Find(id);
+            var budget = _db.Budgets.Find(request.BudgetId);
             if (budget == null)
             {
                 return NotFound();
