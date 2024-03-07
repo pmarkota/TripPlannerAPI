@@ -2,6 +2,6 @@
 {
     public class PostGetBudgetById
     {
-        public int BudgetId { get; set; }
+        public long BudgetId { get; set; }
     }
 }
